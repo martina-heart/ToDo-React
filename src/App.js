@@ -1,11 +1,13 @@
-import ToDo from "./Components/ToDo/ToDo.component";
+import ToDos from "./Components/ToDos/ToDos.component";
 
 function App() {
   return (
     <div>
-      <h1>My ToDo App</h1>
-      <h2>List of ToDoes</h2>
-      <ToDo />
+      <header>
+        <h1>My ToDo App</h1>
+      </header>
+      <h2>List of ToDos</h2>
+      <ToDos />
     </div>
   );
 }
