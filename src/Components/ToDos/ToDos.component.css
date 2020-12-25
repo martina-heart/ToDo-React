@@ -1,0 +1,8 @@
+#todos {
+  background-color: ghostwhite;
+  min-height: 700px;
+  width: 800px;
+  margin: 40px auto;
+  box-shadow: 10px 10px 10px 10px rgb(168, 168, 168);
+  box-sizing: border-box;
+}

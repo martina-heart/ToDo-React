@@ -1,28 +1,37 @@
+import "./ToDos-List.component.css";
+import { ListGroup } from "react-bootstrap";
+import { ListGroupItem } from "react-bootstrap";
+
 const ToDosList = (props) => {
   return (
-    <ul>
+    <ListGroup>
       {props.todos.map((todo) => {
         return (
-          <li key={todo.id}>
+          <ListGroupItem key={todo.id}>
             <input
+              value={props.val}
+              className="check"
               type="checkbox"
               checked={todo.completed}
               onChange={function () {
                 return props.onChangeCheckbox(todo.id);
               }}
             />
-            {todo.text}
+            <span id="spanT">{todo.text}</span>
             <button
+              type="button"
+              className="close"
+              aria-label="Close"
               onClick={function () {
                 return props.onDelete(todo.id);
               }}
             >
               Delete
             </button>
-          </li>
+          </ListGroupItem>
         );
       })}
-    </ul>
+    </ListGroup>
   );
 };
 

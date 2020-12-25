@@ -1,11 +1,14 @@
-const ToDosHeader = ({ val, onChangeHandler, onKeyUpHandler }) => {
+import "./ToDosHeader.component.css";
+
+const ToDosHeader = (props) => {
   return (
     <div>
       <input
         type="text"
-        value={val}
-        onChange={onChangeHandler}
-        onKeyUp={onKeyUpHandler}
+        placeholder="What needs to be done ? "
+        value={props.val}
+        onChange={props.onChangeHandler}
+        onKeyUp={props.onKeyUpHandler}
       />
     </div>
   );

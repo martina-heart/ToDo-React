@@ -1,0 +1,11 @@
+.check {
+  width: 40px;
+}
+
+span {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: x-large;
+  padding-left: 50px;
+}

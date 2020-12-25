@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ToDosList from "../ToDos-List/ToDos-List.component";
 import ToDosHeader from "../ToDosHeader/ToDosHeader.component";
+import Footer from "../Footer/Footer.components";
+import "./ToDos.component.css";
 
 function nextToDoId(todos) {
   const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);
@@ -56,6 +58,39 @@ const ToDos = () => {
     setToDos(newTodos);
   };
 
+  //mark all completed
+
+  const onClickAllHandler = () => {
+    const newTodos = todos.map((todo) => {
+      // return { id: todo.id, text: todo.text, completed: todo.completed, completed: true }
+      // ...todo --> id: todo.id, text: todo.text, completed: todo.completed
+      return { ...todo, completed: true };
+    });
+
+    setToDos(newTodos);
+  };
+
+  // clear completed
+  const onClickClearHandler = () => {
+    const newTodos = todos.filter((todo) => {
+      if (todo.completed) {
+        return false;
+      }
+      return true;
+    });
+    setToDos(newTodos);
+  };
+
+  // all
+  const onClickAllShowHandler = (e) => {
+    const newTodos = todos.map((todo) => {
+      if (e === todo.e) {
+      }
+      return todo;
+    });
+    setToDos(newTodos);
+  };
+
   return (
     <div id="todos">
       <ToDosHeader
@@ -67,6 +102,11 @@ const ToDos = () => {
         todos={todos}
         onChangeCheckbox={(id) => onChangeCheckboxHandler(id)}
         onDelete={onDeleteHandler}
+      />
+      <Footer
+        onClickAllHandler={onClickAllHandler}
+        onClickClearHandler={onClickClearHandler}
+        onClickAllShowHandler={onClickAllShowHandler}
       />
     </div>
   );
