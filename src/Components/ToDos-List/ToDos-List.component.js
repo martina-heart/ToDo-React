@@ -9,7 +9,6 @@ const ToDosList = (props) => {
         return (
           <ListGroupItem key={todo.id}>
             <input
-              value={props.val}
               className="check"
               type="checkbox"
               checked={todo.completed}

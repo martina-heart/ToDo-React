@@ -81,12 +81,24 @@ const ToDos = () => {
     setToDos(newTodos);
   };
 
-  // all
-  const onClickAllShowHandler = (e) => {
-    const newTodos = todos.map((todo) => {
-      if (e === todo.e) {
+  //Active
+  const onClickActiveHandler = () => {
+    const newTodos = todos.filter((todo) => {
+      if (todo.completed) {
+        return false;
       }
-      return todo;
+      return true;
+    });
+    setToDos(newTodos);
+  };
+
+  //Completed
+  const onClickCompletedHandler = () => {
+    const newTodos = todos.filter((todo) => {
+      if (!todo.completed) {
+        return false;
+      }
+      return true;
     });
     setToDos(newTodos);
   };
@@ -106,7 +118,8 @@ const ToDos = () => {
       <Footer
         onClickAllHandler={onClickAllHandler}
         onClickClearHandler={onClickClearHandler}
-        onClickAllShowHandler={onClickAllShowHandler}
+        onClickActiveHandler={onClickActiveHandler}
+        onClickCompletedHandler={onClickCompletedHandler}
       />
     </div>
   );

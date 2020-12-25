@@ -27,24 +27,30 @@ const Footer = (props) => {
       </div>
       <div>
         <h5>Remaining Todos</h5>
-        <p>1 item left</p>
+        <Button>1 item left</Button>
       </div>
       <div>
         <h5>Filter by status</h5>
+        <Button variant="outline-secondary" size="sm">
+          All
+        </Button>
+        <br />
         <Button
           variant="outline-secondary"
           size="sm"
           onClick={function () {
-            return props.onClickAllShowHandler();
+            return props.onClickActiveHandler();
           }}
         >
-          All
-        </Button>
-        <br />
-        <Button variant="outline-secondary" size="sm">
           Active
         </Button>
-        <Button variant="outline-secondary" size="sm">
+        <Button
+          variant="outline-secondary"
+          size="sm"
+          onClick={function () {
+            return props.onClickCompletedHandler();
+          }}
+        >
           Completed
         </Button>
       </div>
