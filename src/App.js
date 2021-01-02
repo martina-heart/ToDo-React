@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 
-import ToDos from "./Components/ToDos/ToDos.component";
+import ToDos from "./Pages/ToDos/ToDos.component";
 import AboutUs from "./Pages/AboutUs/about-us.component";
 import Contact from "./Pages/Contact/contact.component";
 import SingleTodo from "./Pages/SingleTodo/single-todo.component";
