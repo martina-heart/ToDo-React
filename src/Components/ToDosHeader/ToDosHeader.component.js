@@ -9,6 +9,9 @@ class ToDosHeader extends React.Component {
         {(value) => {
           return (
             <>
+              <header>
+                <h2>List of ToDos</h2>
+              </header>
               <div>
                 <input
                   type="text"

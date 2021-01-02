@@ -18,7 +18,7 @@ const ToDosList = () => {
                       type="checkbox"
                       checked={todo.completed}
                       onChange={function () {
-                        return value.onChangeCheckbox(todo.id);
+                        return value.onChangeCheckboxHandler(todo.id);
                       }}
                     />
                     <span id="spanT">{todo.text}</span>

@@ -1,8 +1,8 @@
-import "./Footer.components.css";
+import "./ToDosFooter.components.css";
 import { Button } from "react-bootstrap";
 import { TodosContext } from "../../Contexts/todos.context";
 
-const Footer = () => {
+const ToDosFooter = () => {
   return (
     <>
       <TodosContext.Consumer>
@@ -67,4 +67,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default ToDosFooter;
