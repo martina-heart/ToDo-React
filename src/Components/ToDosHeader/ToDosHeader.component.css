@@ -7,3 +7,12 @@ input {
   transition: 0.5s;
   outline: none;
 }
+
+.h2-css {
+  text-align: center;
+}
+
+.h2-css h2 {
+  font-weight: bold;
+  color: blueviolet;
+}

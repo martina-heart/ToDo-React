@@ -4,7 +4,7 @@ import "./header.component.css";
 const Header = () => {
   return (
     <>
-      <header>
+      <header className="header-css">
         <h1>My App</h1>
         <ul className="menu-css">
           <li className="links">

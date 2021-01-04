@@ -2,20 +2,6 @@ header {
   background-color: #764abc;
 }
 
-h1 {
-  color: white;
-  font-size: 3rem;
-  text-shadow: 10px 10px 10px black;
-  padding: 40px 200px;
-}
-
-h2 {
-  font-size: 70px;
-  font-weight: 200;
-  text-align: center;
-  color: #b83f45;
-}
-
 #css {
   background-color: rgb(236, 236, 236);
 }

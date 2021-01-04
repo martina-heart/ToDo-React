@@ -5,7 +5,7 @@ import AboutUs from "./Pages/AboutUs/about-us.component";
 import Contact from "./Pages/Contact/contact.component";
 import SingleTodo from "./Pages/SingleTodo/single-todo.component";
 import Header from "./Common/Header/header.component";
-import Footer from "./Common/Footer/footer.componet";
+import Footer from "./Common/Footer/footer.component";
 import Home from "./Pages/Home/home.component";
 import { TodosContextProvider } from "./Contexts/todos.context";
 
